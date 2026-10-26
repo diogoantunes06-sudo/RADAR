@@ -1,0 +1,42 @@
+name: Atualizar cotacoes
+
+on:
+  schedule:
+    - cron: "*/30 12-21 * * 1-5"   # a cada 30 min, de 9h as 18h30 de Brasilia, em dias uteis
+    - cron: "17 23 * * 1-5"        # uma vez depois do fechamento, com os precos finais
+  workflow_dispatch:                # botao "Run workflow" na aba Actions
+  push:
+    paths: ["ativos.json", "analise.json", "config.json"]   # roda na hora quando voce muda a lista
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Buscar cotacoes e recalcular
+        env:
+          BRAPI_TOKEN: ${{ secrets.BRAPI_TOKEN }}
+        run: python bot.py
+      - name: Salvar dados.json (so se mudou)
+        run: |
+          git config user.name "robo-radar"
+          git config user.email "robo-radar@users.noreply.github.com"
+          git add dados.json
+          if git diff --cached --quiet; then
+            echo "Nada mudou."
+          else
+            git commit -m "Cotacoes $(TZ=America/Sao_Paulo date +'%d/%m %H:%M')"
+            git pull --rebase
+            git push
+          fi

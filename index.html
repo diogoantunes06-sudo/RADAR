@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Radar: uma regua por ativo (minima e maxima de 52 semanas, preco, alvo e teto) e o que importa ao lado. */
+:root {
+  --papel: #EEF1EC; --cartao: #F8FAF7; --tinta: #10261C; --apagado: #5E6F66; --linha: #CBD5CD;
+  --ouro: #E2B21C; --alta: #11804A; --baixa: #C23A2B; --trilho: #DCE3DD;
+  --titulo: "Bricolage Grotesque", "Arial Narrow", Arial, sans-serif;
+  --texto: "Public Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --papel: #0F1A15; --cartao: #16241D; --tinta: #E6EEE8; --apagado: #8FA398; --linha: #27382F;
+    --ouro: #F4C430; --alta: #3CC27D; --baixa: #FF6B5B; --trilho: #23332A; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+body { margin: 0; background: var(--papel); color: var(--tinta); font-family: var(--texto); font-size: 15px; line-height: 1.5;
+  font-variant-numeric: tabular-nums; }
+.pag { max-width: 1120px; margin: 0 auto; padding: 28px max(16px, env(safe-area-inset-left)) 64px; display: grid; gap: 28px; }
+:focus-visible { outline: 2px solid var(--ouro); outline-offset: 2px; }
+a { color: inherit; }
+
+/* topo */
+.topo { display: grid; grid-template-columns: 1fr auto; gap: 8px 24px; align-items: end; }
+.marca { font-family: var(--titulo); font-weight: 800; font-stretch: 80%; font-size: 22px; letter-spacing: .01em; display: flex; align-items: center; gap: 10px; }
+.marca::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--ouro); box-shadow: 0 0 0 4px color-mix(in srgb, var(--ouro) 30%, transparent); }
+.hora { color: var(--apagado); font-size: 13px; text-align: right; }
+.patrimonio { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; margin-top: 12px; }
+.patrimonio .v { font-family: var(--titulo); font-weight: 700; font-stretch: 85%; font-size: clamp(44px, 9vw, 92px); line-height: .95; letter-spacing: -.02em; }
+.dia { font-weight: 600; font-size: 17px; }
+.extras { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px 28px; color: var(--apagado); }
+.extras b { color: var(--tinta); font-weight: 600; }
+.alta { color: var(--alta); } .baixa { color: var(--baixa); }
+
+/* filtros */
+.barra { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; position: sticky; top: 0; z-index: 5; background: var(--papel); padding: 10px 0; border-bottom: 1px solid var(--linha); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: inherit; font-size: 14px; border: 1px solid var(--linha); background: transparent; color: var(--tinta); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--tinta); color: var(--papel); border-color: var(--tinta); }
+.chip small { opacity: .7; margin-left: 4px; }
+.barra .dir { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+.barra select, .barra input { font: inherit; font-size: 14px; color: var(--tinta); background: var(--cartao); border: 1px solid var(--linha); border-radius: 8px; padding: 6px 10px; }
+.barra input { width: 9rem; }
+
+/* lista */
+.lista { display: grid; gap: 10px; }
+.ativo { background: var(--cartao); border: 1px solid var(--linha); border-radius: 14px; }
+.ativo > button { all: unset; box-sizing: border-box; width: 100%; cursor: pointer; display: grid; gap: 12px 24px; padding: 16px 18px;
+  grid-template-columns: minmax(9rem, 1.1fr) minmax(7rem, .8fr) minmax(14rem, 2fr) minmax(16rem, 2fr); align-items: center; border-radius: 14px; }
+.ativo > button:focus-visible { outline: 2px solid var(--ouro); }
+.tk { font-family: var(--titulo); font-weight: 700; font-stretch: 85%; font-size: 24px; line-height: 1; }
+.nm { color: var(--apagado); font-size: 13px; margin-top: 4px; }
+.tag { display: inline-block; font-size: 12px; border: 1px solid var(--linha); border-radius: 6px; padding: 0 6px; margin-top: 6px; color: var(--apagado); }
+.px { font-weight: 600; font-size: 18px; }
+.px small { display: block; font-size: 13px; font-weight: 600; }
+.nums { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px 12px; }
+.nums div { min-width: 0; }
+.nums span { display: block; color: var(--apagado); font-size: 12px; }
+.nums b { font-weight: 600; font-size: 15px; }
+.sinais { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; margin-top: -4px; }
+.sinal { font-size: 12px; padding: 1px 8px; border-radius: 999px; background: color-mix(in srgb, var(--alta) 14%, transparent); color: var(--alta); }
+.sinal.ruim { background: color-mix(in srgb, var(--baixa) 12%, transparent); color: var(--baixa); }
+
+/* regua */
+.regua { position: relative; height: 40px; }
+.regua .tr { position: absolute; left: 0; right: 0; top: 18px; height: 4px; border-radius: 2px; background: var(--trilho); }
+.regua .pt { position: absolute; top: 12px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; background: var(--tinta); border: 3px solid var(--cartao); }
+.regua .alvo { position: absolute; top: 9px; width: 3px; height: 22px; margin-left: -1.5px; border-radius: 2px; background: var(--tinta); opacity: .55; }
+.regua .teto { position: absolute; top: 13px; width: 12px; height: 12px; margin-left: -6px; transform: rotate(45deg); background: var(--ouro); }
+.regua .ext { position: absolute; top: 26px; font-size: 11px; color: var(--apagado); }
+.regua .ext.r { right: 0; } .regua .fora { position: absolute; top: 0; font-size: 11px; color: var(--apagado); }
+
+/* detalhe */
+.det { display: none; padding: 0 18px 18px; border-top: 1px dashed var(--linha); margin: 0 18px; padding-inline: 0; }
+.ativo.aberto .det { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); padding-top: 14px; }
+.det h4 { margin: 0 0 6px; font-size: 13px; font-weight: 600; color: var(--apagado); }
+.det dl { margin: 0; display: grid; grid-template-columns: auto auto; gap: 3px 12px; font-size: 14px; }
+.det dt { color: var(--apagado); } .det dd { margin: 0; text-align: right; font-weight: 500; }
+.det p { margin: 0; font-size: 14px; }
+
+.legenda { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--apagado); font-size: 13px; }
+.legenda i { display: inline-block; vertical-align: -2px; margin-right: 6px; }
+.rodape { color: var(--apagado); font-size: 13px; display: grid; gap: 6px; max-width: 80ch; }
+.rodape p { margin: 0; }
+.vazio { padding: 40px; text-align: center; color: var(--apagado); border: 1px dashed var(--linha); border-radius: 14px; }
+
+@media (max-width: 860px) {
+  .ativo > button { grid-template-columns: 1fr auto; }
+  .regua, .nums { grid-column: 1 / -1; }
+  .px { text-align: right; }
+}
+@media (max-width: 520px) {
+  .nums { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .barra .dir { margin-left: 0; width: 100%; }
+  .barra input { flex: 1; }
+  .topo { grid-template-columns: 1fr; } .hora { text-align: left; }
+}
+</style>
+</head>
+<body>
+<main class="pag">
+  <header class="topo">
+    <div class="marca">Radar</div>
+    <div class="hora" id="hora">Carregando cotações</div>
+    <div class="patrimonio"><span class="v" id="pat">–</span><span class="dia" id="dia"></span></div>
+    <div class="extras" id="extras"></div>
+  </header>
+
+  <nav class="barra" aria-label="Filtros">
+    <div class="chips" id="chips"></div>
+    <div class="dir">
+      <label><span class="sr" hidden>Ordenar por</span>
+        <select id="ordem" aria-label="Ordenar por">
+          <option value="potencial_pct">Maior potencial até o alvo</option>
+          <option value="margem_teto_pct">Mais abaixo do preço-teto</option>
+          <option value="dy">Maior dividend yield</option>
+          <option value="var_dia_pct">Maior alta no dia</option>
+          <option value="var_dia_neg">Maior queda no dia</option>
+          <option value="ticker">Ordem alfabética</option>
+        </select>
+      </label>
+      <input id="busca" type="search" placeholder="Buscar ativo" aria-label="Buscar ativo">
+    </div>
+  </nav>
+
+  <div class="legenda">
+    <span><i style="width:10px;height:10px;border-radius:50%;background:var(--tinta)"></i>preço atual</span>
+    <span><i style="width:3px;height:14px;background:var(--tinta);opacity:.55"></i>alvo médio dos analistas</span>
+    <span><i style="width:9px;height:9px;transform:rotate(45deg);background:var(--ouro)"></i>preço-teto</span>
+    <span>a régua vai da mínima à máxima de 52 semanas</span>
+  </div>
+
+  <section class="lista" id="lista" aria-live="polite"></section>
+
+  <footer class="rodape" id="rodape">
+    <p><b>Preço-teto das ações</b>: proventos dos últimos 12 meses divididos pelo rendimento mínimo de Bazin. <b>Preço-teto dos fundos</b>: rendimentos de 12 meses divididos pelo CDI líquido de IR, ou seja, o preço em que o fundo renderia o mesmo que o CDI. <b>Graham</b>: raiz de 22,5 × LPA × VPA.</p>
+    <p>Cotações e proventos: Yahoo Finance. Selic: Banco Central. Preço-alvo, LPA e VPA vêm do arquivo de análise. Nada aqui é recomendação de compra ou venda.</p>
+  </footer>
+</main>
+
+<script>
+(() => {
+  const nf2 = new Intl.NumberFormat('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  const nf1 = new Intl.NumberFormat('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 1});
+  const brl = (v) => v == null ? '–' : 'R$ ' + nf2.format(v);
+  const pct = (v, casas = 1) => v == null ? '–' : (v > 0 ? '+' : '') + (casas === 2 ? nf2 : nf1).format(v) + '%';
+  const cls = (v) => v == null ? '' : v > 0 ? 'alta' : v < 0 ? 'baixa' : '';
+  const el = (tag, attrs = {}, ...filhos) => {
+    const e = document.createElement(tag);
+    Object.entries(attrs).forEach(([k, v]) => { if (v == null) return; if (k === 'class') e.className = v; else if (k === 'style') e.style.cssText = v; else e.setAttribute(k, v); });
+    filhos.flat().forEach((f) => e.append(f instanceof Node ? f : document.createTextNode(String(f))));
+    return e;
+  };
+  const TIPOS = {todos: 'Tudo', acao: 'Ações', fii: 'FIIs', fiagro: 'Fiagros'};
+  let dados = null, filtro = 'todos', abertos = new Set();
+  try { filtro = localStorage.getItem('radar-filtro') || 'todos'; document.getElementById('ordem').value = localStorage.getItem('radar-ordem') || 'potencial_pct'; if (!TIPOS[filtro]) filtro = 'todos'; } catch (e) {}
+
+  async function carregar() {
+    try {
+      const r = await fetch('dados.json?t=' + Date.now(), {cache: 'no-store'});
+      if (!r.ok) throw new Error(r.status);
+      dados = await r.json();
+      desenhar();
+    } catch (e) {
+      document.getElementById('hora').textContent = 'Não consegui ler os dados. O robô ainda não rodou?';
+    }
+  }
+
+  function topo() {
+    const r = dados.resumo;
+    const pat = document.getElementById('pat');
+    pat.textContent = pct(r.var_media_pct, 2);
+    pat.className = 'v ' + cls(r.var_media_pct);
+    document.getElementById('dia').textContent = 'variação média dos ativos hoje';
+    const [d, h] = dados.atualizado_em.split(' ');
+    document.getElementById('hora').textContent = 'Atualizado em ' + d.slice(8, 10) + '/' + d.slice(5, 7) + ' às ' + h;
+    const ex = document.getElementById('extras');
+    ex.replaceChildren(
+      el('span', {}, el('b', {class: 'alta'}, r.em_alta), ' em alta, ', el('b', {class: 'baixa'}, r.em_baixa), ' em baixa, de ', el('b', {}, r.n_ativos), ' ativos'),
+      el('span', {}, 'Selic ', el('b', {}, nf2.format(dados.selic) + '%'), ', CDI líquido ', el('b', {}, nf2.format(dados.cdi_liquido) + '%')),
+    );
+    if (dados.falhas && dados.falhas.length) ex.append(el('span', {class: 'baixa'}, 'Sem cotação nova: ' + dados.falhas.join(', ')));
+  }
+
+  function chips() {
+    const cont = {todos: dados.ativos.length};
+    dados.ativos.forEach((a) => { cont[a.tipo] = (cont[a.tipo] || 0) + 1; });
+    const c = document.getElementById('chips');
+    c.replaceChildren(...Object.entries(TIPOS).filter(([k]) => cont[k]).map(([k, nome]) => {
+      const b = el('button', {class: 'chip', type: 'button', 'aria-pressed': String(filtro === k)}, nome, el('small', {}, cont[k]));
+      b.addEventListener('click', () => { filtro = k; try { localStorage.setItem('radar-filtro', k); } catch (e) {} desenhar(); });
+      return b;
+    }));
+  }
+
+  function regua(a) {
+    const vals = [a.min52, a.max52, a.preco, a.alvo_medio, a.preco_teto].filter((v) => v != null && v > 0);
+    let lo = Math.min(...vals), hi = Math.max(...vals);
+    const pad = (hi - lo) * 0.04 || 1; lo -= pad; hi += pad;
+    const x = (v) => ((v - lo) / (hi - lo) * 100).toFixed(2) + '%';
+    const r = el('div', {class: 'regua', 'aria-hidden': 'true'}, el('div', {class: 'tr', style: `left:${x(a.min52)};right:calc(100% - ${x(a.max52)})`}));
+    if (a.preco_teto) r.append(el('div', {class: 'teto', style: `left:${x(a.preco_teto)}`, title: 'Preço-teto ' + brl(a.preco_teto)}));
+    if (a.alvo_medio) r.append(el('div', {class: 'alvo', style: `left:${x(a.alvo_medio)}`, title: 'Alvo médio ' + brl(a.alvo_medio)}));
+    r.append(el('div', {class: 'pt', style: `left:${x(a.preco)}`}));
+    r.append(el('div', {class: 'ext', style: `left:${x(a.min52)}`}, brl(a.min52)));
+    r.append(el('div', {class: 'ext r', style: `right:calc(100% - ${x(a.max52)})`}, brl(a.max52)));
+    return r;
+  }
+
+  function cartao(a) {
+    const acao = a.tipo === 'acao';
+    const nums = el('div', {class: 'nums'},
+      acao
+        ? el('div', {}, el('span', {}, 'Potencial'), el('b', {class: cls(a.potencial_pct)}, a.potencial_pct == null ? 'sem alvo' : pct(a.potencial_pct)))
+        : el('div', {}, el('span', {}, 'P/VP'), el('b', {}, a.pvp == null ? '–' : nf2.format(a.pvp))),
+      el('div', {}, el('span', {}, 'Até o teto'), el('b', {class: cls(a.margem_teto_pct)}, pct(a.margem_teto_pct))),
+      el('div', {}, el('span', {}, 'DY 12m'), el('b', {}, a.dy == null ? '–' : nf1.format(a.dy) + '%')),
+      acao
+        ? el('div', {}, el('span', {}, 'P/L'), el('b', {}, a.pl == null ? '–' : nf2.format(a.pl)))
+        : el('div', {}, el('span', {}, 'DY ÷ CDI'), el('b', {class: a.dy_vs_cdi >= 1 ? 'alta' : ''}, a.dy_vs_cdi == null ? '–' : nf2.format(a.dy_vs_cdi) + '×')),
+    );
+    const sin = (a.sinais || []).map((s) => el('span', {class: 'sinal' + (/acima do alvo/.test(s) ? ' ruim' : '')}, s));
+    if (a.desatualizado) sin.push(el('span', {class: 'sinal ruim'}, 'cotação antiga'));
+    const id = 'det-' + a.ticker;
+    const btn = el('button', {type: 'button', 'aria-expanded': String(abertos.has(a.ticker)), 'aria-controls': id},
+      el('div', {}, el('div', {class: 'tk'}, a.ticker), el('div', {class: 'nm'}, a.nome), el('span', {class: 'tag'}, a.segmento || TIPOS[a.tipo])),
+      el('div', {class: 'px'}, brl(a.preco), el('small', {class: cls(a.var_dia_pct)}, pct(a.var_dia_pct, 2) + ' hoje')),
+      regua(a), nums,
+      sin.length ? el('div', {class: 'sinais'}, sin) : '',
+    );
+    const det = el('div', {class: 'det', id});
+    const dl = (pares) => el('dl', {}, pares.filter((p) => p[1] != null).flatMap(([k, v]) => [el('dt', {}, k), el('dd', {}, v)]));
+    if (acao) {
+      det.append(
+        el('div', {}, el('h4', {}, 'Analistas'), dl([
+          ['Alvo médio', a.alvo_medio && brl(a.alvo_medio)],
+          ['Faixa', a.alvo_min && (brl(a.alvo_min) + ' a ' + brl(a.alvo_max))],
+          ['Analistas', a.n_analistas],
+          ['Fonte', a.origem_alvo], ['Data', a.data_alvo],
+        ])),
+        el('div', {}, el('h4', {}, 'Valor'), dl([
+          [a.teto_nome || 'Preço-teto', brl(a.preco_teto)], ['Graham', a.graham && brl(a.graham)], ['Fonte da cotação', a.fonte_cotacao],
+          ['P/L', a.pl && nf2.format(a.pl)], ['P/VP', a.pvp && nf2.format(a.pvp)],
+          ['LPA', a.lpa && brl(a.lpa)], ['VPA', a.vpa && brl(a.vpa)],
+        ])),
+      );
+    } else {
+      det.append(el('div', {}, el('h4', {}, 'Valor'), dl([
+        ['Preço-teto pelo CDI', brl(a.preco_teto)], ['Valor patrimonial', a.vp_cota && brl(a.vp_cota)],
+        ['P/VP', a.pvp && nf2.format(a.pvp)], ['DY ÷ CDI líquido', a.dy_vs_cdi && nf2.format(a.dy_vs_cdi) + '×'], ['Fonte da cotação', a.fonte_cotacao],
+      ])));
+    }
+    const prov = (a.ultimos_proventos || []).map((p) => [p.data.slice(8, 10) + '/' + p.data.slice(5, 7) + '/' + p.data.slice(2, 4), brl(p.valor)]);
+    det.append(el('div', {}, el('h4', {}, 'Últimos proventos'), prov.length ? dl(prov) : el('p', {}, 'Nenhum nos últimos 12 meses.')));
+    const box = el('article', {class: 'ativo' + (abertos.has(a.ticker) ? ' aberto' : '')}, btn, det);
+    btn.addEventListener('click', () => {
+      abertos.has(a.ticker) ? abertos.delete(a.ticker) : abertos.add(a.ticker);
+      box.classList.toggle('aberto'); btn.setAttribute('aria-expanded', String(abertos.has(a.ticker)));
+    });
+    return box;
+  }
+
+  function desenhar() {
+    if (!dados) return;
+    topo(); chips();
+    const ordem = document.getElementById('ordem').value;
+    const busca = document.getElementById('busca').value.trim().toUpperCase();
+    let lista = dados.ativos.filter((a) => filtro === 'todos' || a.tipo === filtro);
+    if (busca) lista = lista.filter((a) => (a.ticker + ' ' + a.nome).toUpperCase().includes(busca));
+    const val = (a) => ordem === 'var_dia_neg' ? -(a.var_dia_pct ?? 0) : a[ordem];
+    lista.sort((x, y) => ordem === 'ticker' ? x.ticker.localeCompare(y.ticker) : (val(y) ?? -1e9) - (val(x) ?? -1e9));
+    const l = document.getElementById('lista');
+    l.replaceChildren(...(lista.length ? lista.map(cartao) : [el('div', {class: 'vazio'}, 'Nenhum ativo com esse filtro.')]));
+  }
+
+  document.getElementById('ordem').addEventListener('change', (e) => { try { localStorage.setItem('radar-ordem', e.target.value); } catch (x) {} desenhar(); });
+  document.getElementById('busca').addEventListener('input', desenhar);
+  carregar();
+  setInterval(carregar, 5 * 60 * 1000);
+})();
+</script>
+</body>
+</html>

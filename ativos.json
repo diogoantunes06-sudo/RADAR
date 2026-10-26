@@ -1,0 +1,107 @@
+[
+  {
+    "ticker": "ABEV3",
+    "nome": "Ambev",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "BBAS3",
+    "nome": "Banco do Brasil",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "BBSE3",
+    "nome": "BB Seguridade",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "BRBI11",
+    "nome": "BR Partners",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "GOAU4",
+    "nome": "Metalúrgica Gerdau",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "ITSA4",
+    "nome": "Itaúsa",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "KLBN4",
+    "nome": "Klabin",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "PETR4",
+    "nome": "Petrobras",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "TAEE11",
+    "nome": "Taesa",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "VALE3",
+    "nome": "Vale",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "BTLG11",
+    "nome": "BTG Pactual Logística",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "GARE11",
+    "nome": "Guardian Real Estate",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "HGLG11",
+    "nome": "Pátria Log",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "HGRE11",
+    "nome": "Pátria Escritórios",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "KFOF11",
+    "nome": "Kinea Fundo de Fundos",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "KNIP11",
+    "nome": "Kinea Índices de Preços",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "MXRF11",
+    "nome": "Maxi Renda",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "XPML11",
+    "nome": "XP Malls",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "SNFZ11",
+    "nome": "Suno Fazendas",
+    "tipo": "fiagro"
+  },
+  {
+    "ticker": "VGIA11",
+    "nome": "Valora CRA",
+    "tipo": "fiagro"
+  },
+  {
+    "ticker": "ITUB4",
+    "nome": "Itaú Unibanco",
+    "tipo": "acao"
+  }
+]

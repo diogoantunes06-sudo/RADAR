@@ -1,0 +1,144 @@
+{
+  "_leia": "Atualizado a mao ou pelo Claude. Acoes: alvo_medio, alvo_min, alvo_max, n_analistas, origem_alvo, data_alvo, lpa, vpa. Fundos: segmento, vp_cota.",
+  "coletado_em": "2026-10-26",
+  "ABEV3": {
+    "alvo_medio": 16.83,
+    "alvo_min": 13.13,
+    "alvo_max": 21.28,
+    "n_analistas": 17,
+    "origem_alvo": "Consenso de 17 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 1.05,
+    "vpa": 5.7
+  },
+  "BBAS3": {
+    "alvo_medio": 23.46,
+    "alvo_min": 19.7,
+    "alvo_max": 40.95,
+    "n_analistas": 14,
+    "origem_alvo": "Consenso de 14 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 2.68,
+    "vpa": 32.47
+  },
+  "BBSE3": {
+    "alvo_medio": 37.74,
+    "alvo_min": 31.31,
+    "alvo_max": 48.3,
+    "n_analistas": 13,
+    "origem_alvo": "Consenso de 13 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 4.73,
+    "vpa": 5.61
+  },
+  "BRBI11": {
+    "alvo_medio": 22.8,
+    "alvo_min": 20.0,
+    "alvo_max": 26.0,
+    "n_analistas": 5,
+    "origem_alvo": "Consenso de 5 analistas (A Revista)",
+    "data_alvo": "set/2026",
+    "lpa": 1.52,
+    "vpa": 7.71
+  },
+  "GOAU4": {
+    "alvo_medio": 13.06,
+    "alvo_min": 10.4,
+    "alvo_max": 15.75,
+    "n_analistas": 7,
+    "origem_alvo": "Consenso de 7 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 0.6,
+    "vpa": 14.54
+  },
+  "ITSA4": {
+    "alvo_medio": 17.85,
+    "alvo_min": 16.46,
+    "alvo_max": 19.01,
+    "n_analistas": 8,
+    "origem_alvo": "Consenso de 8 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 1.62,
+    "vpa": 8.36
+  },
+  "KLBN4": {
+    "alvo_medio": 4.28,
+    "alvo_min": null,
+    "alvo_max": null,
+    "n_analistas": 1,
+    "origem_alvo": "Safra, alvo da unit KLBN11 R$ 21,40 dividido por 5",
+    "data_alvo": "19/10/2026",
+    "lpa": 0.09,
+    "vpa": 1.52
+  },
+  "PETR4": {
+    "alvo_medio": 58.9,
+    "alvo_min": 55.0,
+    "alvo_max": 64.0,
+    "n_analistas": 10,
+    "origem_alvo": "Consenso de 10 analistas (TradingView)",
+    "data_alvo": "out/2026",
+    "lpa": 10.35,
+    "vpa": 37.32
+  },
+  "TAEE11": {
+    "alvo_medio": 38.0,
+    "alvo_min": null,
+    "alvo_max": null,
+    "n_analistas": 1,
+    "origem_alvo": "Bradesco BBI, recomendação de venda",
+    "data_alvo": "08/01/2026",
+    "lpa": 4.72,
+    "vpa": 23.43
+  },
+  "VALE3": {
+    "alvo_medio": 84.66,
+    "alvo_min": 73.73,
+    "alvo_max": 99.12,
+    "n_analistas": 10,
+    "origem_alvo": "Consenso de 10 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 2.34,
+    "vpa": 44.3
+  },
+  "BTLG11": {
+    "segmento": "Tijolo: galpões",
+    "vp_cota": 107.04
+  },
+  "GARE11": {
+    "segmento": "Tijolo: renda urbana",
+    "vp_cota": 9.07
+  },
+  "HGLG11": {
+    "segmento": "Tijolo: galpões",
+    "vp_cota": 166.43
+  },
+  "HGRE11": {
+    "segmento": "Tijolo: lajes corporativas",
+    "vp_cota": 146.64
+  },
+  "KFOF11": {
+    "segmento": "Fundo de fundos",
+    "vp_cota": 89.31
+  },
+  "KNIP11": {
+    "segmento": "Papel: CRI IPCA",
+    "vp_cota": 92.06
+  },
+  "MXRF11": {
+    "segmento": "Papel: CRI",
+    "vp_cota": 9.26
+  },
+  "XPML11": {
+    "segmento": "Tijolo: shoppings",
+    "vp_cota": 110.11
+  },
+  "SNFZ11": {
+    "segmento": "Fiagro: terras",
+    "vp_cota": 10.04
+  },
+  "VGIA11": {
+    "segmento": "Fiagro: CRA",
+    "vp_cota": 9.6
+  }
+}
