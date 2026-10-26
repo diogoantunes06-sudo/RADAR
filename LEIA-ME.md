@@ -2,7 +2,7 @@
 
 Site de consulta das suas ações e fundos, com cotações atualizadas sozinhas.
 
-- **Site** (`index.html`): resumo do dia (variação média, quantos em alta e em baixa, Selic) e um cartão por ativo com a régua de 52 semanas, preço-alvo, preço-teto, DY e P/L. Abre no PC e no celular.
+- **Site** (`index.html`): resumo do dia (variação média, quantos em alta e em baixa, Selic), três quadros de destaque e os ativos separados em Ações, Fundos imobiliários e Fiagros. Dentro de cada um, os ativos ficam agrupados por setor (ações) ou tipo de fundo, cada grupo com a variação e o DY médios e um botão para recolher. Dá para ver em **Cartões** (com a régua de 52 semanas) ou em **Lista** (tabela compacta). Clique num ativo para abrir os detalhes. Abre no PC e no celular.
 - **Robô** (`bot.py` + `.github/workflows/atualizar.yml`): roda nos servidores do GitHub a cada 30 minutos durante o pregão (9h às 18h30, dias úteis) e mais uma vez às 20h17 com os preços de fechamento. Busca cotações e proventos no Yahoo Finance e a Selic no Banco Central, recalcula tudo e grava `dados.json`.
 
 ## Arquivos que você edita
@@ -10,7 +10,7 @@ Site de consulta das suas ações e fundos, com cotações atualizadas sozinhas.
 | Arquivo | Para quê |
 |---|---|
 | `ativos.json` | A lista do que acompanhar. |
-| `analise.json` | Preço-alvo, LPA, VPA (ações) e segmento e valor patrimonial (fundos). Muda pouco: atualize quando sair notícia ou peça ao Claude. |
+| `analise.json` | Preço-alvo, LPA, VPA e setor (ações); segmento e valor patrimonial (fundos). O setor e o segmento definem o grupo em que o ativo aparece no site. Muda pouco: atualize quando sair notícia ou peça ao Claude. |
 | `config.json` | Premissas: rendimento mínimo de Bazin (6%), diferença CDI x Selic, IR. |
 
 Para **incluir uma ação**, edite `ativos.json` no site do GitHub (ícone do lápis) e acrescente, antes do último `]`:
@@ -24,7 +24,7 @@ Para **incluir uma ação**, edite `ativos.json` no site do GitHub (ícone do l�
   }
 ```
 
-`tipo` é `acao`, `fii` ou `fiagro`. Ao salvar, o robô roda sozinho em um ou dois minutos. Sem dados em `analise.json`, o ativo aparece com "sem alvo"; o resto (cotação, DY, preço-teto) funciona normalmente.
+`tipo` é `acao`, `fii` ou `fiagro`. Ao salvar, o robô roda sozinho em um ou dois minutos. Sem dados em `analise.json`, o ativo aparece no grupo "Outras ações" (ou "Outros fundos") com "sem alvo"; o resto (cotação, DY, preço-teto) funciona normalmente. Para colocá-lo num grupo, acrescente em `analise.json` algo como `"WEGE3": {"setor": "Indústria"}` ou, para fundo, `"XXXX11": {"segmento": "Tijolo: galpões"}`.
 
 Para tirar um ativo, apague o bloco dele (e a vírgula que sobrar).
 

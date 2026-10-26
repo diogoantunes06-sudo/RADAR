@@ -9,7 +9,8 @@
     "origem_alvo": "Consenso de 17 analistas (Alpha Spread)",
     "data_alvo": "out/2026",
     "lpa": 1.05,
-    "vpa": 5.7
+    "vpa": 5.7,
+    "setor": "Consumo"
   },
   "BBAS3": {
     "alvo_medio": 23.46,
@@ -19,7 +20,8 @@
     "origem_alvo": "Consenso de 14 analistas (Alpha Spread)",
     "data_alvo": "out/2026",
     "lpa": 2.68,
-    "vpa": 32.47
+    "vpa": 32.47,
+    "setor": "Bancos"
   },
   "BBSE3": {
     "alvo_medio": 37.74,
@@ -29,7 +31,8 @@
     "origem_alvo": "Consenso de 13 analistas (Alpha Spread)",
     "data_alvo": "out/2026",
     "lpa": 4.73,
-    "vpa": 5.61
+    "vpa": 5.61,
+    "setor": "Seguros"
   },
   "BRBI11": {
     "alvo_medio": 22.8,
@@ -39,7 +42,8 @@
     "origem_alvo": "Consenso de 5 analistas (A Revista)",
     "data_alvo": "set/2026",
     "lpa": 1.52,
-    "vpa": 7.71
+    "vpa": 7.71,
+    "setor": "Bancos"
   },
   "GOAU4": {
     "alvo_medio": 13.06,
@@ -49,7 +53,8 @@
     "origem_alvo": "Consenso de 7 analistas (Alpha Spread)",
     "data_alvo": "out/2026",
     "lpa": 0.6,
-    "vpa": 14.54
+    "vpa": 14.54,
+    "setor": "Siderurgia e papel"
   },
   "ITSA4": {
     "alvo_medio": 17.85,
@@ -59,7 +64,8 @@
     "origem_alvo": "Consenso de 8 analistas (Alpha Spread)",
     "data_alvo": "out/2026",
     "lpa": 1.62,
-    "vpa": 8.36
+    "vpa": 8.36,
+    "setor": "Bancos"
   },
   "KLBN4": {
     "alvo_medio": 4.28,
@@ -69,7 +75,8 @@
     "origem_alvo": "Safra, alvo da unit KLBN11 R$ 21,40 dividido por 5",
     "data_alvo": "19/10/2026",
     "lpa": 0.09,
-    "vpa": 1.52
+    "vpa": 1.52,
+    "setor": "Siderurgia e papel"
   },
   "PETR4": {
     "alvo_medio": 58.9,
@@ -79,7 +86,8 @@
     "origem_alvo": "Consenso de 10 analistas (TradingView)",
     "data_alvo": "out/2026",
     "lpa": 10.35,
-    "vpa": 37.32
+    "vpa": 37.32,
+    "setor": "Petróleo e mineração"
   },
   "TAEE11": {
     "alvo_medio": 38.0,
@@ -89,7 +97,8 @@
     "origem_alvo": "Bradesco BBI, recomendação de venda",
     "data_alvo": "08/01/2026",
     "lpa": 4.72,
-    "vpa": 23.43
+    "vpa": 23.43,
+    "setor": "Energia elétrica"
   },
   "VALE3": {
     "alvo_medio": 84.66,
@@ -99,7 +108,8 @@
     "origem_alvo": "Consenso de 10 analistas (Alpha Spread)",
     "data_alvo": "out/2026",
     "lpa": 2.34,
-    "vpa": 44.3
+    "vpa": 44.3,
+    "setor": "Petróleo e mineração"
   },
   "BTLG11": {
     "segmento": "Tijolo: galpões",
@@ -140,5 +150,221 @@
   "VGIA11": {
     "segmento": "Fiagro: CRA",
     "vp_cota": 9.6
+  },
+  "ITUB4": {
+    "setor": "Bancos",
+    "alvo_medio": 50.56,
+    "alvo_min": 46.46,
+    "alvo_max": 56.7,
+    "n_analistas": 17,
+    "origem_alvo": "Consenso de 17 analistas (valueinvesting.io)",
+    "data_alvo": "out/2026",
+    "lpa": 4.25,
+    "vpa": 19.75
+  },
+  "BBDC4": {
+    "setor": "Bancos",
+    "alvo_medio": 22.4,
+    "alvo_min": 16.16,
+    "alvo_max": 29.4,
+    "n_analistas": 14,
+    "origem_alvo": "Consenso de 14 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 2.36,
+    "vpa": 17.42
+  },
+  "B3SA3": {
+    "setor": "Bancos",
+    "alvo_medio": 23.46,
+    "alvo_min": 16.16,
+    "alvo_max": 31.5,
+    "n_analistas": 14,
+    "origem_alvo": "Consenso de 14 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 1.06,
+    "vpa": 3.71
+  },
+  "PSSA3": {
+    "setor": "Seguros",
+    "alvo_medio": 57.12,
+    "alvo_min": 42.42,
+    "alvo_max": 67.2,
+    "n_analistas": 13,
+    "origem_alvo": "Consenso de 13 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 5.7,
+    "vpa": 24.94
+  },
+  "CXSE3": {
+    "setor": "Seguros",
+    "alvo_medio": 21.42,
+    "alvo_min": 16.16,
+    "alvo_max": 26.25,
+    "n_analistas": 14,
+    "origem_alvo": "Consenso de 14 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 1.51,
+    "vpa": 4.6
+  },
+  "EGIE3": {
+    "setor": "Energia elétrica",
+    "alvo_medio": 41.36,
+    "alvo_min": 34.26,
+    "alvo_max": 52.5,
+    "n_analistas": null,
+    "origem_alvo": "Consenso (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 2.8,
+    "vpa": 10.6
+  },
+  "CMIG4": {
+    "setor": "Energia elétrica",
+    "alvo_medio": 12.24,
+    "alvo_min": 10.0,
+    "alvo_max": 15.33,
+    "n_analistas": 13,
+    "origem_alvo": "Consenso de 13 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 1.61,
+    "vpa": 10.2
+  },
+  "ISAE4": {
+    "setor": "Energia elétrica",
+    "alvo_medio": 31.77,
+    "alvo_min": 27.2,
+    "alvo_max": 37.0,
+    "n_analistas": 11,
+    "origem_alvo": "Consenso de 11 analistas (TradingView)",
+    "data_alvo": "out/2026",
+    "lpa": 4.01,
+    "vpa": 31.51
+  },
+  "CPFE3": {
+    "setor": "Energia elétrica",
+    "alvo_medio": 49.98,
+    "alvo_min": 40.4,
+    "alvo_max": 57.75,
+    "n_analistas": 13,
+    "origem_alvo": "Consenso de 13 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 5.21,
+    "vpa": 19.72
+  },
+  "SAPR11": {
+    "setor": "Saneamento",
+    "alvo_medio": null,
+    "alvo_min": null,
+    "alvo_max": null,
+    "n_analistas": null,
+    "origem_alvo": null,
+    "data_alvo": null,
+    "lpa": null,
+    "vpa": null
+  },
+  "CSMG3": {
+    "setor": "Saneamento",
+    "alvo_medio": 83.65,
+    "alvo_min": 79.0,
+    "alvo_max": 88.3,
+    "n_analistas": 2,
+    "origem_alvo": "Citi (R$ 79) e XP (R$ 88,30)",
+    "data_alvo": "14/07/2026",
+    "lpa": 3.4,
+    "vpa": 23.28
+  },
+  "PRIO3": {
+    "setor": "Petróleo e mineração",
+    "alvo_medio": null,
+    "alvo_min": null,
+    "alvo_max": null,
+    "n_analistas": null,
+    "origem_alvo": null,
+    "data_alvo": null,
+    "lpa": 4.43,
+    "vpa": 32.34
+  },
+  "SUZB3": {
+    "setor": "Siderurgia e papel",
+    "alvo_medio": 65.69,
+    "alvo_min": 53.53,
+    "alvo_max": 78.75,
+    "n_analistas": 18,
+    "origem_alvo": "Consenso de 18 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 6.46,
+    "vpa": 39.31
+  },
+  "RADL3": {
+    "setor": "Consumo",
+    "alvo_medio": 31.27,
+    "alvo_min": 23.23,
+    "alvo_max": 36.75,
+    "n_analistas": null,
+    "origem_alvo": "Consenso (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 0.77,
+    "vpa": 4.16
+  },
+  "WEGE3": {
+    "setor": "Indústria",
+    "alvo_medio": 53.04,
+    "alvo_min": 40.4,
+    "alvo_max": 78.75,
+    "n_analistas": 17,
+    "origem_alvo": "Consenso de 17 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 1.49,
+    "vpa": 4.75
+  },
+  "VIVT3": {
+    "setor": "Telecom",
+    "alvo_medio": 38.25,
+    "alvo_min": 31.31,
+    "alvo_max": 66.4,
+    "n_analistas": 16,
+    "origem_alvo": "Consenso de 16 analistas (Alpha Spread)",
+    "data_alvo": "out/2026",
+    "lpa": 2.05,
+    "vpa": 20.34
+  },
+  "KNRI11": {
+    "segmento": "Tijolo: híbrido",
+    "vp_cota": 163.38
+  },
+  "VISC11": {
+    "segmento": "Tijolo: shoppings",
+    "vp_cota": 115.6
+  },
+  "HGRU11": {
+    "segmento": "Tijolo: renda urbana",
+    "vp_cota": 128.2
+  },
+  "TRXF11": {
+    "segmento": "Tijolo: renda urbana",
+    "vp_cota": 95.75
+  },
+  "XPLG11": {
+    "segmento": "Tijolo: galpões",
+    "vp_cota": 105.03
+  },
+  "PVBI11": {
+    "segmento": "Tijolo: lajes corporativas",
+    "vp_cota": 104.53
+  },
+  "KNCR11": {
+    "segmento": "Papel: CRI CDI",
+    "vp_cota": null
+  },
+  "CPTS11": {
+    "segmento": "Papel: CRI",
+    "vp_cota": 8.65
+  },
+  "RECR11": {
+    "segmento": "Papel: CRI",
+    "vp_cota": 86.48
+  },
+  "KNCA11": {
+    "segmento": "Fiagro: CRA",
+    "vp_cota": 100.22
   }
 }

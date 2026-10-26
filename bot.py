@@ -116,6 +116,20 @@ def pct(a, b):
     return None if a is None or not b else round((a / b - 1) * 100, 1)
 
 
+def grupo_fundo(segmento):
+    """Tijolo se divide pelo tipo de imovel; papel fica junto; fiagro pelo que tem na carteira."""
+    if not segmento:
+        return "Outros fundos"
+    base, _, det = (p.strip() for p in segmento.partition(":"))
+    if base == "Tijolo" and det:
+        return det[0].upper() + det[1:]
+    if base == "Papel":
+        return "Papel (recebíveis)"
+    if base == "Fiagro" and det:
+        return {"CRA": "Recebíveis do agro (CRA)", "terras": "Terras agrícolas"}.get(det, det[0].upper() + det[1:])
+    return segmento
+
+
 def calcular(ativo, q, an, cfg, cdi_liq, hoje):
     preco = q["preco"]
     corte = (hoje - timedelta(days=365)).strftime("%Y-%m-%d")
@@ -136,6 +150,7 @@ def calcular(ativo, q, an, cfg, cdi_liq, hoje):
         for k in ("alvo_medio", "alvo_min", "alvo_max", "n_analistas", "origem_alvo", "data_alvo", "lpa", "vpa"):
             r[k] = an.get(k)
         r["potencial_pct"] = pct(an.get("alvo_medio"), preco)
+        r["grupo"] = an.get("setor") or "Outras ações"
         lpa, vpa = an.get("lpa"), an.get("vpa")
         if lpa and vpa and lpa > 0 and vpa > 0:
             r["graham"] = r2(math.sqrt(22.5 * lpa * vpa))
@@ -151,6 +166,7 @@ def calcular(ativo, q, an, cfg, cdi_liq, hoje):
         r["margem_teto_pct"] = pct(teto, preco)
         r["teto_nome"] = "CDI líquido"
         r["segmento"] = an.get("segmento")
+        r["grupo"] = grupo_fundo(an.get("segmento"))
         vp = an.get("vp_cota")
         r["vp_cota"] = vp
         r["pvp"] = r2(preco / vp) if vp else None

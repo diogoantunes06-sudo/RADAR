@@ -5,8 +5,18 @@
     "tipo": "acao"
   },
   {
+    "ticker": "B3SA3",
+    "nome": "B3",
+    "tipo": "acao"
+  },
+  {
     "ticker": "BBAS3",
     "nome": "Banco do Brasil",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "BBDC4",
+    "nome": "Bradesco",
     "tipo": "acao"
   },
   {
@@ -20,13 +30,48 @@
     "tipo": "acao"
   },
   {
+    "ticker": "CMIG4",
+    "nome": "Cemig",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "CPFE3",
+    "nome": "CPFL Energia",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "CSMG3",
+    "nome": "Copasa",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "CXSE3",
+    "nome": "Caixa Seguridade",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "EGIE3",
+    "nome": "Engie Brasil",
+    "tipo": "acao"
+  },
+  {
     "ticker": "GOAU4",
     "nome": "Metalúrgica Gerdau",
     "tipo": "acao"
   },
   {
+    "ticker": "ISAE4",
+    "nome": "ISA Energia",
+    "tipo": "acao"
+  },
+  {
     "ticker": "ITSA4",
     "nome": "Itaúsa",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "ITUB4",
+    "nome": "Itaú Unibanco",
     "tipo": "acao"
   },
   {
@@ -40,6 +85,31 @@
     "tipo": "acao"
   },
   {
+    "ticker": "PRIO3",
+    "nome": "PRIO",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "PSSA3",
+    "nome": "Porto Seguro",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "RADL3",
+    "nome": "Raia Drogasil",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "SAPR11",
+    "nome": "Sanepar",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "SUZB3",
+    "nome": "Suzano",
+    "tipo": "acao"
+  },
+  {
     "ticker": "TAEE11",
     "nome": "Taesa",
     "tipo": "acao"
@@ -50,8 +120,23 @@
     "tipo": "acao"
   },
   {
+    "ticker": "VIVT3",
+    "nome": "Vivo",
+    "tipo": "acao"
+  },
+  {
+    "ticker": "WEGE3",
+    "nome": "WEG",
+    "tipo": "acao"
+  },
+  {
     "ticker": "BTLG11",
     "nome": "BTG Pactual Logística",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "CPTS11",
+    "nome": "Capitânia Securities",
     "tipo": "fii"
   },
   {
@@ -70,8 +155,18 @@
     "tipo": "fii"
   },
   {
+    "ticker": "HGRU11",
+    "nome": "Pátria Renda Urbana",
+    "tipo": "fii"
+  },
+  {
     "ticker": "KFOF11",
     "nome": "Kinea Fundo de Fundos",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "KNCR11",
+    "nome": "Kinea Rendimentos Imobiliários",
     "tipo": "fii"
   },
   {
@@ -80,14 +175,49 @@
     "tipo": "fii"
   },
   {
+    "ticker": "KNRI11",
+    "nome": "Kinea Renda Imobiliária",
+    "tipo": "fii"
+  },
+  {
     "ticker": "MXRF11",
     "nome": "Maxi Renda",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "PVBI11",
+    "nome": "VBI Prime Properties",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "RECR11",
+    "nome": "REC Recebíveis",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "TRXF11",
+    "nome": "TRX Real Estate",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "VISC11",
+    "nome": "Vinci Shopping Centers",
+    "tipo": "fii"
+  },
+  {
+    "ticker": "XPLG11",
+    "nome": "XP Log",
     "tipo": "fii"
   },
   {
     "ticker": "XPML11",
     "nome": "XP Malls",
     "tipo": "fii"
+  },
+  {
+    "ticker": "KNCA11",
+    "nome": "Kinea Crédito Agro",
+    "tipo": "fiagro"
   },
   {
     "ticker": "SNFZ11",
@@ -98,10 +228,5 @@
     "ticker": "VGIA11",
     "nome": "Valora CRA",
     "tipo": "fiagro"
-  },
-  {
-    "ticker": "ITUB4",
-    "nome": "Itaú Unibanco",
-    "tipo": "acao"
   }
 ]
