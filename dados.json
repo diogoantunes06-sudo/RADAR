@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-26 10:32",
+ "atualizado_em": "2026-10-26 10:48",
  "selic": 13.75,
  "fonte_selic": "Banco Central",
  "cdi_liquido": 11.6,
@@ -11,10 +11,10 @@
  },
  "analise_coletada_em": "2026-10-26",
  "resumo": {
-  "n_ativos": 21,
-  "em_alta": 10,
-  "em_baixa": 5,
-  "var_media_pct": 0.34
+  "n_ativos": 46,
+  "em_alta": 18,
+  "em_baixa": 10,
+  "var_media_pct": 0.15
  },
  "falhas": [],
  "ativos": [
@@ -58,9 +58,59 @@
    "lpa": 1.05,
    "vpa": 5.7,
    "potencial_pct": 0.9,
+   "grupo": "Consumo",
    "graham": 11.6,
    "pl": 15.89,
    "pvp": 2.93
+  },
+  {
+   "nome": "B3",
+   "ticker": "B3SA3",
+   "tipo": "acao",
+   "preco": 23.65,
+   "var_dia_pct": 1.7,
+   "min52": 12.53,
+   "max52": 23.71,
+   "proventos_12m": 0.9026,
+   "dy": 3.82,
+   "ultimos_proventos": [
+    {
+     "data": "2026-09-23",
+     "valor": 0.226635
+    },
+    {
+     "data": "2026-06-25",
+     "valor": 0.221177
+    },
+    {
+     "data": "2026-04-01",
+     "valor": 0.07434
+    },
+    {
+     "data": "2026-01-02",
+     "valor": 0.38047
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "acima do alvo"
+   ],
+   "preco_teto": 15.04,
+   "margem_teto_pct": -36.4,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 23.46,
+   "alvo_min": 16.16,
+   "alvo_max": 31.5,
+   "n_analistas": 14,
+   "origem_alvo": "Consenso de 14 analistas (Alpha Spread)",
+   "data_alvo": "out/2026",
+   "lpa": 1.06,
+   "vpa": 3.71,
+   "potencial_pct": -0.8,
+   "grupo": "Bancos",
+   "graham": 9.41,
+   "pl": 22.31,
+   "pvp": 6.37
   },
   {
    "nome": "Banco do Brasil",
@@ -114,9 +164,68 @@
    "lpa": 2.68,
    "vpa": 32.47,
    "potencial_pct": -5.1,
+   "grupo": "Bancos",
    "graham": 44.25,
    "pl": 9.22,
    "pvp": 0.76
+  },
+  {
+   "nome": "Bradesco",
+   "ticker": "BBDC4",
+   "tipo": "acao",
+   "preco": 20.37,
+   "var_dia_pct": 0.7,
+   "min52": 15.75,
+   "max52": 22.8,
+   "proventos_12m": 1.6124,
+   "dy": 7.92,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-14",
+     "valor": 0.356245
+    },
+    {
+     "data": "2026-10-02",
+     "valor": 0.018975
+    },
+    {
+     "data": "2026-09-02",
+     "valor": 0.018975
+    },
+    {
+     "data": "2026-08-04",
+     "valor": 0.018942
+    },
+    {
+     "data": "2026-07-06",
+     "valor": 0.346297
+    },
+    {
+     "data": "2026-07-02",
+     "valor": 0.018942
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo",
+    "abaixo do teto"
+   ],
+   "preco_teto": 26.87,
+   "margem_teto_pct": 31.9,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 22.4,
+   "alvo_min": 16.16,
+   "alvo_max": 29.4,
+   "n_analistas": 14,
+   "origem_alvo": "Consenso de 14 analistas (Alpha Spread)",
+   "data_alvo": "out/2026",
+   "lpa": 2.36,
+   "vpa": 17.42,
+   "potencial_pct": 10.0,
+   "grupo": "Bancos",
+   "graham": 30.41,
+   "pl": 8.63,
+   "pvp": 1.17
   },
   {
    "nome": "BB Seguridade",
@@ -155,6 +264,7 @@
    "lpa": 4.73,
    "vpa": 5.61,
    "potencial_pct": -13.6,
+   "grupo": "Seguros",
    "graham": 24.43,
    "pl": 9.23,
    "pvp": 7.79
@@ -200,9 +310,258 @@
    "lpa": 1.52,
    "vpa": 7.71,
    "potencial_pct": 22.1,
+   "grupo": "Bancos",
    "graham": 16.24,
    "pl": 12.28,
    "pvp": 2.42
+  },
+  {
+   "nome": "Cemig",
+   "ticker": "CMIG4",
+   "tipo": "acao",
+   "preco": 11.67,
+   "var_dia_pct": 0.1,
+   "min52": 9.95,
+   "max52": 13.81,
+   "proventos_12m": 1.1394,
+   "dy": 9.76,
+   "ultimos_proventos": [
+    {
+     "data": "2026-09-23",
+     "valor": 0.069913
+    },
+    {
+     "data": "2026-06-24",
+     "valor": 0.220405
+    },
+    {
+     "data": "2026-05-04",
+     "valor": 0.236356
+    },
+    {
+     "data": "2026-03-25",
+     "valor": 0.23
+    },
+    {
+     "data": "2025-12-26",
+     "valor": 0.236803
+    },
+    {
+     "data": "2025-12-23",
+     "valor": 0.145875
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo",
+    "abaixo do teto"
+   ],
+   "preco_teto": 18.99,
+   "margem_teto_pct": 62.7,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 12.24,
+   "alvo_min": 10.0,
+   "alvo_max": 15.33,
+   "n_analistas": 13,
+   "origem_alvo": "Consenso de 13 analistas (Alpha Spread)",
+   "data_alvo": "out/2026",
+   "lpa": 1.61,
+   "vpa": 10.2,
+   "potencial_pct": 4.9,
+   "grupo": "Energia elétrica",
+   "graham": 19.22,
+   "pl": 7.25,
+   "pvp": 1.14
+  },
+  {
+   "nome": "CPFL Energia",
+   "ticker": "CPFE3",
+   "tipo": "acao",
+   "preco": 49.79,
+   "var_dia_pct": 0.6,
+   "min52": 40.99,
+   "max52": 56.48,
+   "proventos_12m": 3.7315,
+   "dy": 7.49,
+   "ultimos_proventos": [
+    {
+     "data": "2026-04-30",
+     "valor": 3.731536
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo",
+    "abaixo do teto"
+   ],
+   "preco_teto": 62.19,
+   "margem_teto_pct": 24.9,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 49.98,
+   "alvo_min": 40.4,
+   "alvo_max": 57.75,
+   "n_analistas": 13,
+   "origem_alvo": "Consenso de 13 analistas (Alpha Spread)",
+   "data_alvo": "out/2026",
+   "lpa": 5.21,
+   "vpa": 19.72,
+   "potencial_pct": 0.4,
+   "grupo": "Energia elétrica",
+   "graham": 48.08,
+   "pl": 9.56,
+   "pvp": 2.52
+  },
+  {
+   "nome": "Copasa",
+   "ticker": "CSMG3",
+   "tipo": "acao",
+   "preco": 64.58,
+   "var_dia_pct": -0.0,
+   "min52": 37.1,
+   "max52": 67.45,
+   "proventos_12m": 1.9932,
+   "dy": 3.09,
+   "ultimos_proventos": [
+    {
+     "data": "2026-09-22",
+     "valor": 0.255646
+    },
+    {
+     "data": "2026-06-24",
+     "valor": 0.375874
+    },
+    {
+     "data": "2026-03-24",
+     "valor": 0.468386
+    },
+    {
+     "data": "2026-03-09",
+     "valor": 0.001815
+    },
+    {
+     "data": "2025-12-23",
+     "valor": 0.364057
+    },
+    {
+     "data": "2025-12-17",
+     "valor": 0.527452
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo"
+   ],
+   "preco_teto": 33.22,
+   "margem_teto_pct": -48.6,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 83.65,
+   "alvo_min": 79.0,
+   "alvo_max": 88.3,
+   "n_analistas": 2,
+   "origem_alvo": "Citi (R$ 79) e XP (R$ 88,30)",
+   "data_alvo": "14/07/2026",
+   "lpa": 3.4,
+   "vpa": 23.28,
+   "potencial_pct": 29.5,
+   "grupo": "Saneamento",
+   "graham": 42.2,
+   "pl": 18.99,
+   "pvp": 2.77
+  },
+  {
+   "nome": "Caixa Seguridade",
+   "ticker": "CXSE3",
+   "tipo": "acao",
+   "preco": 21.41,
+   "var_dia_pct": 0.5,
+   "min52": 14.93,
+   "max52": 22.44,
+   "proventos_12m": 1.3521,
+   "dy": 6.32,
+   "ultimos_proventos": [
+    {
+     "data": "2026-08-04",
+     "valor": 0.35
+    },
+    {
+     "data": "2026-05-04",
+     "valor": 0.33
+    },
+    {
+     "data": "2026-01-05",
+     "valor": 0.352128
+    },
+    {
+     "data": "2025-11-04",
+     "valor": 0.32
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "acima do alvo",
+    "abaixo do teto"
+   ],
+   "preco_teto": 22.54,
+   "margem_teto_pct": 5.3,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 21.42,
+   "alvo_min": 16.16,
+   "alvo_max": 26.25,
+   "n_analistas": 14,
+   "origem_alvo": "Consenso de 14 analistas (Alpha Spread)",
+   "data_alvo": "out/2026",
+   "lpa": 1.51,
+   "vpa": 4.6,
+   "potencial_pct": 0.0,
+   "grupo": "Seguros",
+   "graham": 12.5,
+   "pl": 14.18,
+   "pvp": 4.65
+  },
+  {
+   "nome": "Engie Brasil",
+   "ticker": "EGIE3",
+   "tipo": "acao",
+   "preco": 30.79,
+   "var_dia_pct": -1.0,
+   "min52": 27.63,
+   "max52": 38.41,
+   "proventos_12m": 1.1156,
+   "dy": 3.62,
+   "ultimos_proventos": [
+    {
+     "data": "2026-08-21",
+     "valor": 0.544207
+    },
+    {
+     "data": "2026-05-05",
+     "valor": 0.484493
+    },
+    {
+     "data": "2025-12-19",
+     "valor": 0.086862
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo"
+   ],
+   "preco_teto": 18.59,
+   "margem_teto_pct": -39.6,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 41.36,
+   "alvo_min": 34.26,
+   "alvo_max": 52.5,
+   "n_analistas": null,
+   "origem_alvo": "Consenso (Alpha Spread)",
+   "data_alvo": "out/2026",
+   "lpa": 2.8,
+   "vpa": 10.6,
+   "potencial_pct": 34.3,
+   "grupo": "Energia elétrica",
+   "graham": 25.84,
+   "pl": 11.0,
+   "pvp": 2.9
   },
   {
    "nome": "Metalúrgica Gerdau",
@@ -248,9 +607,68 @@
    "lpa": 0.6,
    "vpa": 14.54,
    "potencial_pct": 14.6,
+   "grupo": "Siderurgia e papel",
    "graham": 14.01,
    "pl": 19.0,
    "pvp": 0.78
+  },
+  {
+   "nome": "ISA Energia",
+   "ticker": "ISAE4",
+   "tipo": "acao",
+   "preco": 28.32,
+   "var_dia_pct": -0.1,
+   "min52": 24.84,
+   "max52": 31.77,
+   "proventos_12m": 2.0395,
+   "dy": 7.2,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-09",
+     "valor": 0.188959
+    },
+    {
+     "data": "2026-04-20",
+     "valor": 0.141311
+    },
+    {
+     "data": "2026-04-06",
+     "valor": 0.141311
+    },
+    {
+     "data": "2026-03-13",
+     "valor": 0.141311
+    },
+    {
+     "data": "2026-02-27",
+     "valor": 0.250553
+    },
+    {
+     "data": "2026-01-30",
+     "valor": 0.250553
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo",
+    "abaixo do teto"
+   ],
+   "preco_teto": 33.99,
+   "margem_teto_pct": 20.0,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 31.77,
+   "alvo_min": 27.2,
+   "alvo_max": 37.0,
+   "n_analistas": 11,
+   "origem_alvo": "Consenso de 11 analistas (TradingView)",
+   "data_alvo": "out/2026",
+   "lpa": 4.01,
+   "vpa": 31.51,
+   "potencial_pct": 12.2,
+   "grupo": "Energia elétrica",
+   "graham": 53.32,
+   "pl": 7.06,
+   "pvp": 0.9
   },
   {
    "nome": "Itaúsa",
@@ -305,9 +723,68 @@
    "lpa": 1.62,
    "vpa": 8.36,
    "potencial_pct": 16.6,
+   "grupo": "Bancos",
    "graham": 17.46,
    "pl": 9.45,
    "pvp": 1.83
+  },
+  {
+   "nome": "Itaú Unibanco",
+   "ticker": "ITUB4",
+   "tipo": "acao",
+   "preco": 48.3,
+   "var_dia_pct": 0.6,
+   "min52": 37.23,
+   "max52": 50.47,
+   "proventos_12m": 3.0996,
+   "dy": 6.42,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-01",
+     "valor": 0.018182
+    },
+    {
+     "data": "2026-09-01",
+     "valor": 0.018182
+    },
+    {
+     "data": "2026-08-03",
+     "valor": 0.018182
+    },
+    {
+     "data": "2026-07-01",
+     "valor": 0.018182
+    },
+    {
+     "data": "2026-06-19",
+     "valor": 0.36188
+    },
+    {
+     "data": "2026-06-01",
+     "valor": 0.018182
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo",
+    "abaixo do teto"
+   ],
+   "preco_teto": 51.66,
+   "margem_teto_pct": 7.0,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 50.56,
+   "alvo_min": 46.46,
+   "alvo_max": 56.7,
+   "n_analistas": 17,
+   "origem_alvo": "Consenso de 17 analistas (valueinvesting.io)",
+   "data_alvo": "out/2026",
+   "lpa": 4.25,
+   "vpa": 19.75,
+   "potencial_pct": 4.7,
+   "grupo": "Bancos",
+   "graham": 43.46,
+   "pl": 11.36,
+   "pvp": 2.45
   },
   {
    "nome": "Klabin",
@@ -346,6 +823,7 @@
    "lpa": 0.09,
    "vpa": 1.52,
    "potencial_pct": 18.2,
+   "grupo": "Siderurgia e papel",
    "graham": 1.75,
    "pl": 40.22,
    "pvp": 2.38
@@ -395,9 +873,215 @@
    "lpa": 10.35,
    "vpa": 37.32,
    "potencial_pct": 0.4,
+   "grupo": "Petróleo e mineração",
    "graham": 93.22,
    "pl": 5.67,
    "pvp": 1.57
+  },
+  {
+   "nome": "PRIO",
+   "ticker": "PRIO3",
+   "tipo": "acao",
+   "preco": 73.8,
+   "var_dia_pct": -0.0,
+   "min52": 35.77,
+   "max52": 73.8,
+   "proventos_12m": 0,
+   "dy": 0.0,
+   "ultimos_proventos": [],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [],
+   "preco_teto": 0.0,
+   "margem_teto_pct": -100.0,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": null,
+   "alvo_min": null,
+   "alvo_max": null,
+   "n_analistas": null,
+   "origem_alvo": null,
+   "data_alvo": null,
+   "lpa": 4.43,
+   "vpa": 32.34,
+   "potencial_pct": null,
+   "grupo": "Petróleo e mineração",
+   "graham": 56.78,
+   "pl": 16.66,
+   "pvp": 2.28
+  },
+  {
+   "nome": "Porto Seguro",
+   "ticker": "PSSA3",
+   "tipo": "acao",
+   "preco": 51.58,
+   "var_dia_pct": -0.0,
+   "min52": 45.26,
+   "max52": 55.45,
+   "proventos_12m": 2.9995,
+   "dy": 5.82,
+   "ultimos_proventos": [
+    {
+     "data": "2026-09-24",
+     "valor": 0.520657
+    },
+    {
+     "data": "2026-06-23",
+     "valor": 0.512804
+    },
+    {
+     "data": "2026-04-01",
+     "valor": 0.886101
+    },
+    {
+     "data": "2026-03-31",
+     "valor": 0.542318
+    },
+    {
+     "data": "2025-12-29",
+     "valor": 0.537604
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo"
+   ],
+   "preco_teto": 49.99,
+   "margem_teto_pct": -3.1,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 57.12,
+   "alvo_min": 42.42,
+   "alvo_max": 67.2,
+   "n_analistas": 13,
+   "origem_alvo": "Consenso de 13 analistas (Alpha Spread)",
+   "data_alvo": "out/2026",
+   "lpa": 5.7,
+   "vpa": 24.94,
+   "potencial_pct": 10.7,
+   "grupo": "Seguros",
+   "graham": 56.56,
+   "pl": 9.05,
+   "pvp": 2.07
+  },
+  {
+   "nome": "Raia Drogasil",
+   "ticker": "RADL3",
+   "tipo": "acao",
+   "preco": 20.28,
+   "var_dia_pct": -0.2,
+   "min52": 16.25,
+   "max52": 27.0,
+   "proventos_12m": 0.4506,
+   "dy": 2.22,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-08",
+     "valor": 0.091391
+    },
+    {
+     "data": "2026-07-06",
+     "valor": 0.115582
+    },
+    {
+     "data": "2026-04-07",
+     "valor": 0.086015
+    },
+    {
+     "data": "2025-12-08",
+     "valor": 0.157618
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo"
+   ],
+   "preco_teto": 7.51,
+   "margem_teto_pct": -63.0,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 31.27,
+   "alvo_min": 23.23,
+   "alvo_max": 36.75,
+   "n_analistas": null,
+   "origem_alvo": "Consenso (Alpha Spread)",
+   "data_alvo": "out/2026",
+   "lpa": 0.77,
+   "vpa": 4.16,
+   "potencial_pct": 54.2,
+   "grupo": "Consumo",
+   "graham": 8.49,
+   "pl": 26.34,
+   "pvp": 4.88
+  },
+  {
+   "nome": "Sanepar",
+   "ticker": "SAPR11",
+   "tipo": "acao",
+   "preco": 41.92,
+   "var_dia_pct": 0.0,
+   "min52": 31.45,
+   "max52": 47.9,
+   "proventos_12m": 0.5524,
+   "dy": 1.32,
+   "ultimos_proventos": [
+    {
+     "data": "2026-01-02",
+     "valor": 0.552413
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [],
+   "preco_teto": 9.21,
+   "margem_teto_pct": -78.0,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": null,
+   "alvo_min": null,
+   "alvo_max": null,
+   "n_analistas": null,
+   "origem_alvo": null,
+   "data_alvo": null,
+   "lpa": null,
+   "vpa": null,
+   "potencial_pct": null,
+   "grupo": "Saneamento"
+  },
+  {
+   "nome": "Suzano",
+   "ticker": "SUZB3",
+   "tipo": "acao",
+   "preco": 43.06,
+   "var_dia_pct": -0.0,
+   "min52": 39.68,
+   "max52": 58.98,
+   "proventos_12m": 1.1211,
+   "dy": 2.6,
+   "ultimos_proventos": [
+    {
+     "data": "2026-04-30",
+     "valor": 0.004552
+    },
+    {
+     "data": "2025-12-19",
+     "valor": 1.116587
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo"
+   ],
+   "preco_teto": 18.69,
+   "margem_teto_pct": -56.6,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 65.69,
+   "alvo_min": 53.53,
+   "alvo_max": 78.75,
+   "n_analistas": 18,
+   "origem_alvo": "Consenso de 18 analistas (Alpha Spread)",
+   "data_alvo": "out/2026",
+   "lpa": 6.46,
+   "vpa": 39.31,
+   "potencial_pct": 52.6,
+   "grupo": "Siderurgia e papel",
+   "graham": 75.59,
+   "pl": 6.67,
+   "pvp": 1.1
   },
   {
    "nome": "Taesa",
@@ -444,6 +1128,7 @@
    "lpa": 4.72,
    "vpa": 23.43,
    "potencial_pct": -15.1,
+   "grupo": "Energia elétrica",
    "graham": 49.88,
    "pl": 9.48,
    "pvp": 1.91
@@ -485,9 +1170,121 @@
    "lpa": 2.34,
    "vpa": 44.3,
    "potencial_pct": 36.8,
+   "grupo": "Petróleo e mineração",
    "graham": 48.29,
    "pl": 26.45,
    "pvp": 1.4
+  },
+  {
+   "nome": "Vivo",
+   "ticker": "VIVT3",
+   "tipo": "acao",
+   "preco": 32.43,
+   "var_dia_pct": -2.3,
+   "min52": 29.28,
+   "max52": 43.18,
+   "proventos_12m": 2.5468,
+   "dy": 7.85,
+   "ultimos_proventos": [
+    {
+     "data": "2026-09-28",
+     "valor": 0.156465
+    },
+    {
+     "data": "2026-08-27",
+     "valor": 0.109525
+    },
+    {
+     "data": "2026-07-28",
+     "valor": 0.156465
+    },
+    {
+     "data": "2026-06-29",
+     "valor": 0.071974
+    },
+    {
+     "data": "2026-05-28",
+     "valor": 0.187758
+    },
+    {
+     "data": "2026-05-25",
+     "valor": 1.251719
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo",
+    "abaixo do teto"
+   ],
+   "preco_teto": 42.45,
+   "margem_teto_pct": 30.9,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 38.25,
+   "alvo_min": 31.31,
+   "alvo_max": 66.4,
+   "n_analistas": 16,
+   "origem_alvo": "Consenso de 16 analistas (Alpha Spread)",
+   "data_alvo": "out/2026",
+   "lpa": 2.05,
+   "vpa": 20.34,
+   "potencial_pct": 17.9,
+   "grupo": "Telecom",
+   "graham": 30.63,
+   "pl": 15.82,
+   "pvp": 1.59
+  },
+  {
+   "nome": "WEG",
+   "ticker": "WEGE3",
+   "tipo": "acao",
+   "preco": 42.73,
+   "var_dia_pct": -2.9,
+   "min52": 41.45,
+   "max52": 54.03,
+   "proventos_12m": 2.0032,
+   "dy": 4.69,
+   "ultimos_proventos": [
+    {
+     "data": "2026-09-21",
+     "valor": 0.107212
+    },
+    {
+     "data": "2026-06-22",
+     "valor": 0.104424
+    },
+    {
+     "data": "2026-03-23",
+     "valor": 0.100121
+    },
+    {
+     "data": "2025-12-22",
+     "valor": 1.238495
+    },
+    {
+     "data": "2025-12-04",
+     "valor": 0.452994
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do alvo"
+   ],
+   "preco_teto": 33.39,
+   "margem_teto_pct": -21.9,
+   "teto_nome": "Bazin (6%)",
+   "alvo_medio": 53.04,
+   "alvo_min": 40.4,
+   "alvo_max": 78.75,
+   "n_analistas": 17,
+   "origem_alvo": "Consenso de 17 analistas (Alpha Spread)",
+   "data_alvo": "out/2026",
+   "lpa": 1.49,
+   "vpa": 4.75,
+   "potencial_pct": 24.1,
+   "grupo": "Indústria",
+   "graham": 12.62,
+   "pl": 28.68,
+   "pvp": 9.0
   },
   {
    "nome": "BTG Pactual Logística",
@@ -533,9 +1330,60 @@
    "margem_teto_pct": -20.8,
    "teto_nome": "CDI líquido",
    "segmento": "Tijolo: galpões",
+   "grupo": "Galpões",
    "vp_cota": 107.04,
    "pvp": 0.98,
    "dy_vs_cdi": 0.79
+  },
+  {
+   "nome": "Capitânia Securities",
+   "ticker": "CPTS11",
+   "tipo": "fii",
+   "preco": 7.77,
+   "var_dia_pct": 0.8,
+   "min52": 7.26,
+   "max52": 8.17,
+   "proventos_12m": 1.08,
+   "dy": 13.9,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-16",
+     "valor": 0.09
+    },
+    {
+     "data": "2026-09-16",
+     "valor": 0.09
+    },
+    {
+     "data": "2026-08-17",
+     "valor": 0.09
+    },
+    {
+     "data": "2026-07-15",
+     "valor": 0.09
+    },
+    {
+     "data": "2026-06-16",
+     "valor": 0.09
+    },
+    {
+     "data": "2026-05-14",
+     "valor": 0.09
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "rende acima do CDI",
+    "abaixo do VP"
+   ],
+   "preco_teto": 9.31,
+   "margem_teto_pct": 19.8,
+   "teto_nome": "CDI líquido",
+   "segmento": "Papel: CRI",
+   "grupo": "Papel (recebíveis)",
+   "vp_cota": 8.65,
+   "pvp": 0.9,
+   "dy_vs_cdi": 1.2
   },
   {
    "nome": "Guardian Real Estate",
@@ -581,6 +1429,7 @@
    "margem_teto_pct": -10.2,
    "teto_nome": "CDI líquido",
    "segmento": "Tijolo: renda urbana",
+   "grupo": "Renda urbana",
    "vp_cota": 9.07,
    "pvp": 0.97,
    "dy_vs_cdi": 0.9
@@ -629,6 +1478,7 @@
    "margem_teto_pct": -27.6,
    "teto_nome": "CDI líquido",
    "segmento": "Tijolo: galpões",
+   "grupo": "Galpões",
    "vp_cota": 166.43,
    "pvp": 0.96,
    "dy_vs_cdi": 0.72
@@ -677,9 +1527,59 @@
    "margem_teto_pct": -24.1,
    "teto_nome": "CDI líquido",
    "segmento": "Tijolo: lajes corporativas",
+   "grupo": "Lajes corporativas",
    "vp_cota": 146.64,
    "pvp": 0.89,
    "dy_vs_cdi": 0.76
+  },
+  {
+   "nome": "Pátria Renda Urbana",
+   "ticker": "HGRU11",
+   "tipo": "fii",
+   "preco": 125.47,
+   "var_dia_pct": -0.0,
+   "min52": 113.09,
+   "max52": 133.5,
+   "proventos_12m": 10.945,
+   "dy": 8.72,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-01",
+     "valor": 0.95
+    },
+    {
+     "data": "2026-09-01",
+     "valor": 0.95
+    },
+    {
+     "data": "2026-08-03",
+     "valor": 0.95
+    },
+    {
+     "data": "2026-07-01",
+     "valor": 0.95
+    },
+    {
+     "data": "2026-06-01",
+     "valor": 0.95
+    },
+    {
+     "data": "2026-05-04",
+     "valor": 0.94924
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do VP"
+   ],
+   "preco_teto": 94.33,
+   "margem_teto_pct": -24.8,
+   "teto_nome": "CDI líquido",
+   "segmento": "Tijolo: renda urbana",
+   "grupo": "Renda urbana",
+   "vp_cota": 128.2,
+   "pvp": 0.98,
+   "dy_vs_cdi": 0.75
   },
   {
    "nome": "Kinea Fundo de Fundos",
@@ -725,9 +1625,59 @@
    "margem_teto_pct": -1.0,
    "teto_nome": "CDI líquido",
    "segmento": "Fundo de fundos",
+   "grupo": "Fundo de fundos",
    "vp_cota": 89.31,
    "pvp": 0.94,
    "dy_vs_cdi": 0.99
+  },
+  {
+   "nome": "Kinea Rendimentos Imobiliários",
+   "ticker": "KNCR11",
+   "tipo": "fii",
+   "preco": 105.55,
+   "var_dia_pct": -0.0,
+   "min52": 104.17,
+   "max52": 108.56,
+   "proventos_12m": 13.9124,
+   "dy": 13.18,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-01",
+     "valor": 1.129381
+    },
+    {
+     "data": "2026-09-01",
+     "valor": 1.14937
+    },
+    {
+     "data": "2026-08-03",
+     "valor": 1.249315
+    },
+    {
+     "data": "2026-07-01",
+     "valor": 1.099398
+    },
+    {
+     "data": "2026-06-01",
+     "valor": 1.099398
+    },
+    {
+     "data": "2026-05-04",
+     "valor": 1.099398
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "rende acima do CDI"
+   ],
+   "preco_teto": 119.91,
+   "margem_teto_pct": 13.6,
+   "teto_nome": "CDI líquido",
+   "segmento": "Papel: CRI CDI",
+   "grupo": "Papel (recebíveis)",
+   "vp_cota": null,
+   "pvp": null,
+   "dy_vs_cdi": 1.14
   },
   {
    "nome": "Kinea Índices de Preços",
@@ -771,9 +1721,59 @@
    "margem_teto_pct": -6.5,
    "teto_nome": "CDI líquido",
    "segmento": "Papel: CRI IPCA",
+   "grupo": "Papel (recebíveis)",
    "vp_cota": 92.06,
    "pvp": 1.01,
    "dy_vs_cdi": 0.93
+  },
+  {
+   "nome": "Kinea Renda Imobiliária",
+   "ticker": "KNRI11",
+   "tipo": "fii",
+   "preco": 162.3,
+   "var_dia_pct": -0.0,
+   "min52": 145.58,
+   "max52": 171.1,
+   "proventos_12m": 13.21,
+   "dy": 8.14,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-01",
+     "valor": 1.1
+    },
+    {
+     "data": "2026-09-01",
+     "valor": 1.1
+    },
+    {
+     "data": "2026-08-03",
+     "valor": 1.1
+    },
+    {
+     "data": "2026-07-01",
+     "valor": 1.38
+    },
+    {
+     "data": "2026-06-01",
+     "valor": 1.1
+    },
+    {
+     "data": "2026-05-04",
+     "valor": 1.1
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do VP"
+   ],
+   "preco_teto": 113.85,
+   "margem_teto_pct": -29.8,
+   "teto_nome": "CDI líquido",
+   "segmento": "Tijolo: híbrido",
+   "grupo": "Híbrido",
+   "vp_cota": 163.38,
+   "pvp": 0.99,
+   "dy_vs_cdi": 0.7
   },
   {
    "nome": "Maxi Renda",
@@ -819,9 +1819,257 @@
    "margem_teto_pct": 9.0,
    "teto_nome": "CDI líquido",
    "segmento": "Papel: CRI",
+   "grupo": "Papel (recebíveis)",
    "vp_cota": 9.26,
    "pvp": 1.02,
    "dy_vs_cdi": 1.09
+  },
+  {
+   "nome": "VBI Prime Properties",
+   "ticker": "PVBI11",
+   "tipo": "fii",
+   "preco": 77.29,
+   "var_dia_pct": 1.6,
+   "min52": 63.99,
+   "max52": 84.24,
+   "proventos_12m": 4.99,
+   "dy": 6.46,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-01",
+     "valor": 0.37
+    },
+    {
+     "data": "2026-09-01",
+     "valor": 0.37
+    },
+    {
+     "data": "2026-08-03",
+     "valor": 0.4
+    },
+    {
+     "data": "2026-07-01",
+     "valor": 0.4
+    },
+    {
+     "data": "2026-06-01",
+     "valor": 0.4
+    },
+    {
+     "data": "2026-05-04",
+     "valor": 0.4
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do VP"
+   ],
+   "preco_teto": 43.01,
+   "margem_teto_pct": -44.4,
+   "teto_nome": "CDI líquido",
+   "segmento": "Tijolo: lajes corporativas",
+   "grupo": "Lajes corporativas",
+   "vp_cota": 104.53,
+   "pvp": 0.74,
+   "dy_vs_cdi": 0.56
+  },
+  {
+   "nome": "REC Recebíveis",
+   "ticker": "RECR11",
+   "tipo": "fii",
+   "preco": 77.77,
+   "var_dia_pct": 0.0,
+   "min52": 55.31,
+   "max52": 83.59,
+   "proventos_12m": 10.7201,
+   "dy": 13.78,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-08",
+     "valor": 0.6182
+    },
+    {
+     "data": "2026-09-09",
+     "valor": 0.7373
+    },
+    {
+     "data": "2026-08-10",
+     "valor": 1.0987
+    },
+    {
+     "data": "2026-07-08",
+     "valor": 1.0759
+    },
+    {
+     "data": "2026-06-09",
+     "valor": 1.118
+    },
+    {
+     "data": "2026-05-11",
+     "valor": 1.0525
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "rende acima do CDI",
+    "abaixo do VP"
+   ],
+   "preco_teto": 92.39,
+   "margem_teto_pct": 18.8,
+   "teto_nome": "CDI líquido",
+   "segmento": "Papel: CRI",
+   "grupo": "Papel (recebíveis)",
+   "vp_cota": 86.48,
+   "pvp": 0.9,
+   "dy_vs_cdi": 1.19
+  },
+  {
+   "nome": "TRX Real Estate",
+   "ticker": "TRXF11",
+   "tipo": "fii",
+   "preco": 71.9,
+   "var_dia_pct": -0.0,
+   "min52": 70.11,
+   "max52": 101.39,
+   "proventos_12m": 10.87,
+   "dy": 15.12,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-01",
+     "valor": 0.93
+    },
+    {
+     "data": "2026-09-01",
+     "valor": 0.93
+    },
+    {
+     "data": "2026-08-03",
+     "valor": 0.93
+    },
+    {
+     "data": "2026-07-01",
+     "valor": 1.5
+    },
+    {
+     "data": "2026-06-01",
+     "valor": 0.93
+    },
+    {
+     "data": "2026-05-04",
+     "valor": 0.93
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "rende acima do CDI",
+    "abaixo do VP"
+   ],
+   "preco_teto": 93.69,
+   "margem_teto_pct": 30.3,
+   "teto_nome": "CDI líquido",
+   "segmento": "Tijolo: renda urbana",
+   "grupo": "Renda urbana",
+   "vp_cota": 95.75,
+   "pvp": 0.75,
+   "dy_vs_cdi": 1.3
+  },
+  {
+   "nome": "Vinci Shopping Centers",
+   "ticker": "VISC11",
+   "tipo": "fii",
+   "preco": 114.2,
+   "var_dia_pct": 0.0,
+   "min52": 100.85,
+   "max52": 114.2,
+   "proventos_12m": 9.99,
+   "dy": 8.75,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-01",
+     "valor": 0.84
+    },
+    {
+     "data": "2026-09-01",
+     "valor": 0.84
+    },
+    {
+     "data": "2026-08-03",
+     "valor": 0.84
+    },
+    {
+     "data": "2026-07-01",
+     "valor": 0.84
+    },
+    {
+     "data": "2026-06-01",
+     "valor": 0.84
+    },
+    {
+     "data": "2026-05-04",
+     "valor": 0.84
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do VP"
+   ],
+   "preco_teto": 86.1,
+   "margem_teto_pct": -24.6,
+   "teto_nome": "CDI líquido",
+   "segmento": "Tijolo: shoppings",
+   "grupo": "Shoppings",
+   "vp_cota": 115.6,
+   "pvp": 0.99,
+   "dy_vs_cdi": 0.75
+  },
+  {
+   "nome": "XP Log",
+   "ticker": "XPLG11",
+   "tipo": "fii",
+   "preco": 101.0,
+   "var_dia_pct": 0.3,
+   "min52": 88.45,
+   "max52": 105.88,
+   "proventos_12m": 9.84,
+   "dy": 9.74,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-01",
+     "valor": 0.82
+    },
+    {
+     "data": "2026-09-01",
+     "valor": 0.82
+    },
+    {
+     "data": "2026-08-03",
+     "valor": 0.82
+    },
+    {
+     "data": "2026-07-01",
+     "valor": 0.82
+    },
+    {
+     "data": "2026-06-01",
+     "valor": 0.82
+    },
+    {
+     "data": "2026-05-04",
+     "valor": 0.82
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "abaixo do VP"
+   ],
+   "preco_teto": 84.81,
+   "margem_teto_pct": -16.0,
+   "teto_nome": "CDI líquido",
+   "segmento": "Tijolo: galpões",
+   "grupo": "Galpões",
+   "vp_cota": 105.03,
+   "pvp": 0.96,
+   "dy_vs_cdi": 0.84
   },
   {
    "nome": "XP Malls",
@@ -867,9 +2115,60 @@
    "margem_teto_pct": -8.8,
    "teto_nome": "CDI líquido",
    "segmento": "Tijolo: shoppings",
+   "grupo": "Shoppings",
    "vp_cota": 110.11,
    "pvp": 0.95,
    "dy_vs_cdi": 0.91
+  },
+  {
+   "nome": "Kinea Crédito Agro",
+   "ticker": "KNCA11",
+   "tipo": "fiagro",
+   "preco": 91.6,
+   "var_dia_pct": 0.0,
+   "min52": 84.3,
+   "max52": 100.09,
+   "proventos_12m": 11.57,
+   "dy": 12.63,
+   "ultimos_proventos": [
+    {
+     "data": "2026-10-01",
+     "valor": 0.93
+    },
+    {
+     "data": "2026-09-01",
+     "valor": 0.85
+    },
+    {
+     "data": "2026-08-03",
+     "valor": 1.0
+    },
+    {
+     "data": "2026-07-01",
+     "valor": 1.13
+    },
+    {
+     "data": "2026-06-01",
+     "valor": 1.1
+    },
+    {
+     "data": "2026-05-04",
+     "valor": 1.1
+    }
+   ],
+   "fonte_cotacao": "Yahoo Finance",
+   "sinais": [
+    "rende acima do CDI",
+    "abaixo do VP"
+   ],
+   "preco_teto": 99.72,
+   "margem_teto_pct": 8.9,
+   "teto_nome": "CDI líquido",
+   "segmento": "Fiagro: CRA",
+   "grupo": "Recebíveis do agro (CRA)",
+   "vp_cota": 100.22,
+   "pvp": 0.91,
+   "dy_vs_cdi": 1.09
   },
   {
    "nome": "Suno Fazendas",
@@ -916,6 +2215,7 @@
    "margem_teto_pct": 13.4,
    "teto_nome": "CDI líquido",
    "segmento": "Fiagro: terras",
+   "grupo": "Terras agrícolas",
    "vp_cota": 10.04,
    "pvp": 0.91,
    "dy_vs_cdi": 1.13
@@ -965,62 +2265,10 @@
    "margem_teto_pct": 53.4,
    "teto_nome": "CDI líquido",
    "segmento": "Fiagro: CRA",
+   "grupo": "Recebíveis do agro (CRA)",
    "vp_cota": 9.6,
    "pvp": 0.95,
    "dy_vs_cdi": 1.53
-  },
-  {
-   "nome": "Itaú Unibanco",
-   "ticker": "ITUB4",
-   "tipo": "acao",
-   "preco": 48.3,
-   "var_dia_pct": 0.6,
-   "min52": 37.23,
-   "max52": 50.47,
-   "proventos_12m": 3.0996,
-   "dy": 6.42,
-   "ultimos_proventos": [
-    {
-     "data": "2026-10-01",
-     "valor": 0.018182
-    },
-    {
-     "data": "2026-09-01",
-     "valor": 0.018182
-    },
-    {
-     "data": "2026-08-03",
-     "valor": 0.018182
-    },
-    {
-     "data": "2026-07-01",
-     "valor": 0.018182
-    },
-    {
-     "data": "2026-06-19",
-     "valor": 0.36188
-    },
-    {
-     "data": "2026-06-01",
-     "valor": 0.018182
-    }
-   ],
-   "fonte_cotacao": "Yahoo Finance",
-   "sinais": [
-    "abaixo do teto"
-   ],
-   "preco_teto": 51.66,
-   "margem_teto_pct": 7.0,
-   "teto_nome": "Bazin (6%)",
-   "alvo_medio": null,
-   "alvo_min": null,
-   "alvo_max": null,
-   "n_analistas": null,
-   "origem_alvo": null,
-   "data_alvo": null,
-   "lpa": null,
-   "vpa": null,
-   "potencial_pct": null
   }
  ]
 }
