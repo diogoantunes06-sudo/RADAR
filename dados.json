@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-30 23:28",
+ "atualizado_em": "2026-11-02 17:58",
  "selic": 13.75,
  "fonte_selic": "Banco Central",
  "cdi_liquido": 11.6,
@@ -621,8 +621,8 @@
    "var_dia_pct": -0.6,
    "min52": 24.76,
    "max52": 31.77,
-   "proventos_12m": 2.0395,
-   "dy": 8.24,
+   "proventos_12m": 1.8145,
+   "dy": 7.33,
    "ultimos_proventos": [
     {
      "data": "2026-10-09",
@@ -654,8 +654,8 @@
     "abaixo do alvo",
     "abaixo do teto"
    ],
-   "preco_teto": 33.99,
-   "margem_teto_pct": 37.3,
+   "preco_teto": 30.24,
+   "margem_teto_pct": 22.1,
    "teto_nome": "Bazin (6%)",
    "alvo_medio": 31.77,
    "alvo_min": 27.2,
