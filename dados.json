@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-23 20:00",
+ "atualizado_em": "2026-11-24 03:58",
  "selic": 13.75,
  "fonte_selic": "Banco Central",
  "cdi_liquido": 11.6,
@@ -13,8 +13,8 @@
  "resumo": {
   "n_ativos": 46,
   "em_alta": 3,
-  "em_baixa": 28,
-  "var_media_pct": -0.65
+  "em_baixa": 29,
+  "var_media_pct": -0.69
  },
  "falhas": [],
  "ativos": [
@@ -1583,8 +1583,8 @@
    "ticker": "KFOF11",
    "tipo": "fii",
    "preco": 69.84,
-   "var_dia_pct": 0.0,
-   "min52": 69.84,
+   "var_dia_pct": -1.8,
+   "min52": 70.18,
    "max52": 87.1,
    "proventos_12m": 9.6,
    "dy": 13.75,
