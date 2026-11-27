@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-27 00:21",
+ "atualizado_em": "2026-11-27 02:06",
  "selic": 13.75,
  "fonte_selic": "Banco Central",
  "cdi_liquido": 11.6,
@@ -380,12 +380,12 @@
    "var_dia_pct": 6.6,
    "min52": 40.99,
    "max52": 56.48,
-   "proventos_12m": 2.8203,
-   "dy": 6.17,
+   "proventos_12m": 3.7315,
+   "dy": 8.17,
    "ultimos_proventos": [
     {
      "data": "2026-04-30",
-     "valor": 2.820279
+     "valor": 3.731536
     }
    ],
    "fonte_cotacao": "Yahoo Finance",
@@ -393,8 +393,8 @@
     "abaixo do alvo",
     "abaixo do teto"
    ],
-   "preco_teto": 47.0,
-   "margem_teto_pct": 2.9,
+   "preco_teto": 62.19,
+   "margem_teto_pct": 36.1,
    "teto_nome": "Bazin (6%)",
    "alvo_medio": 49.98,
    "alvo_min": 40.4,
